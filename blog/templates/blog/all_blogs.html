@@ -1,0 +1,13 @@
+<h1>Hello blog!</h1>
+ 
+{% for blogs in blog %}
+
+<h2>{{ blog.title }}</h2>
+<p>{{ blog.description }}</p>
+<img src="{{ blogs.image.url }}">
+{% if blogs.url %}
+<a href="{{ blogs.url }}">Link</a>
+
+{% endif %}
+
+{% endfor %}
